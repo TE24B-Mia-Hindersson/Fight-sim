@@ -12,3 +12,4 @@ C:\Users\mia.hindersson\Ny mapp (4)\Fightsim\obj\Debug\net9.0\refint\Fightsim.dl
 C:\Users\mia.hindersson\Ny mapp (4)\Fightsim\obj\Debug\net9.0\Fightsim.pdb
 C:\Users\mia.hindersson\Ny mapp (4)\Fightsim\obj\Debug\net9.0\Fightsim.genruntimeconfig.cache
 C:\Users\mia.hindersson\Ny mapp (4)\Fightsim\obj\Debug\net9.0\ref\Fightsim.dll
+C:\Users\mia.hindersson\Ny mapp (4)\Fightsim\obj\Debug\net9.0\Fightsim.sourcelink.json
