@@ -1,0 +1,14 @@
+C:\Users\mia.hindersson\Ny mapp (4)\Fightsim\bin\Debug\net9.0\Fightsim.exe
+C:\Users\mia.hindersson\Ny mapp (4)\Fightsim\bin\Debug\net9.0\Fightsim.deps.json
+C:\Users\mia.hindersson\Ny mapp (4)\Fightsim\bin\Debug\net9.0\Fightsim.runtimeconfig.json
+C:\Users\mia.hindersson\Ny mapp (4)\Fightsim\bin\Debug\net9.0\Fightsim.dll
+C:\Users\mia.hindersson\Ny mapp (4)\Fightsim\bin\Debug\net9.0\Fightsim.pdb
+C:\Users\mia.hindersson\Ny mapp (4)\Fightsim\obj\Debug\net9.0\Fightsim.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mia.hindersson\Ny mapp (4)\Fightsim\obj\Debug\net9.0\Fightsim.AssemblyInfoInputs.cache
+C:\Users\mia.hindersson\Ny mapp (4)\Fightsim\obj\Debug\net9.0\Fightsim.AssemblyInfo.cs
+C:\Users\mia.hindersson\Ny mapp (4)\Fightsim\obj\Debug\net9.0\Fightsim.csproj.CoreCompileInputs.cache
+C:\Users\mia.hindersson\Ny mapp (4)\Fightsim\obj\Debug\net9.0\Fightsim.dll
+C:\Users\mia.hindersson\Ny mapp (4)\Fightsim\obj\Debug\net9.0\refint\Fightsim.dll
+C:\Users\mia.hindersson\Ny mapp (4)\Fightsim\obj\Debug\net9.0\Fightsim.pdb
+C:\Users\mia.hindersson\Ny mapp (4)\Fightsim\obj\Debug\net9.0\Fightsim.genruntimeconfig.cache
+C:\Users\mia.hindersson\Ny mapp (4)\Fightsim\obj\Debug\net9.0\ref\Fightsim.dll
