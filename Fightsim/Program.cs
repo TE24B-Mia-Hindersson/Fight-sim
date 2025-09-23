@@ -11,14 +11,19 @@
 
 int player1hp = 100;
 int player2hp = 100;
-Console.WriteLine("---Welcome to my game---");
+ Console.WriteLine("--------------------------------");
+Console.WriteLine("    ---Welcome to my game---");
+ Console.WriteLine("--------------------------------");
 Console.WriteLine("Please enter the name of the first fighter:");
 string name1 = Console.ReadLine();
+ Console.WriteLine("--------------------------------");
 Console.WriteLine("Now please enter the name of the second fighter:");
 string name2 = Console.ReadLine();
+ Console.WriteLine("--------------------------------");
 Console.WriteLine($"Fighters chosen {name1} vs {name2}!");
 Console.WriteLine("Press Enter to continue...");
 Console.ReadLine();
+Console.Clear();
 while (player1hp > 0 && player2hp > 0)
 {
   Console.WriteLine("    --New Round!--");
@@ -46,10 +51,11 @@ while (player1hp > 0 && player2hp > 0)
     Console.WriteLine("--------------------------------");
     Console.ReadLine();
   }
-   else
-    {
-        Console.WriteLine($"{name2} missed!");
-    }
+  else
+  {
+    Console.WriteLine($"{name2} missed!");
+  }
+  Console.Clear();
 }
 if (player1hp == 0 && player2hp == 0)
 {
@@ -64,6 +70,7 @@ else if (player2hp <= 0)
 {
   Console.WriteLine($"{name1} won!!");
 }
+Console.WriteLine("--------------------------------");
 Console.WriteLine("Press Enter to end game..");
 Console.ReadLine();
 
