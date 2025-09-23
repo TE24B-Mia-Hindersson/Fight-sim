@@ -11,15 +11,15 @@
 
 int player1hp = 100;
 int player2hp = 100;
- Console.WriteLine("--------------------------------");
+Console.WriteLine("--------------------------------");
 Console.WriteLine("    ---Welcome to my game---");
- Console.WriteLine("--------------------------------");
+Console.WriteLine("--------------------------------");
 Console.WriteLine("Please enter the name of the first fighter:");
 string name1 = Console.ReadLine();
- Console.WriteLine("--------------------------------");
+Console.WriteLine("--------------------------------");
 Console.WriteLine("Now please enter the name of the second fighter:");
 string name2 = Console.ReadLine();
- Console.WriteLine("--------------------------------");
+Console.WriteLine("--------------------------------");
 Console.WriteLine($"Fighters chosen {name1} vs {name2}!");
 Console.WriteLine("Press Enter to continue...");
 Console.ReadLine();
@@ -39,6 +39,7 @@ while (player1hp > 0 && player2hp > 0)
   else
   {
     Console.WriteLine($"{name1} missed!");
+    Console.WriteLine("-_-");
   }
   if (player2hp <= 0) break;
   Console.WriteLine("--------------------------------");
@@ -54,9 +55,11 @@ while (player1hp > 0 && player2hp > 0)
   else
   {
     Console.WriteLine($"{name2} missed!");
+    Console.WriteLine("-o-");
   }
   Console.Clear();
 }
+Console.WriteLine("--------------------------------");
 if (player1hp == 0 && player2hp == 0)
 {
   Console.WriteLine("Tie!");
