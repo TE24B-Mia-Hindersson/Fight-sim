@@ -10,6 +10,8 @@
 // // Console.WriteLine(i);
 
 
+using System.Formats.Asn1;
+
 string name1 = "";
 string name2 = "";
 bool playagain = true;
@@ -17,15 +19,14 @@ bool playagain = true;
 // Används för att starta om spelet
 while (playagain)
 {
-  name1 = "";
-  name2 = "";
+  // name1 = "";
+  // name2 = "";
   //nollställer namnen for new gamess
   Console.WriteLine("--------------------------------");
   Console.WriteLine("    ---Welcome to my game---");
   Console.WriteLine("--------------------------------");
   Console.ReadLine();
   Console.Clear();
-
 
   Console.WriteLine("Please enter the name of the first fighter (min 3 characters and max 12):");
   name1 = Console.ReadLine();
@@ -35,12 +36,26 @@ while (playagain)
     name1 = Console.ReadLine();
   }
   Console.WriteLine("--------------------------------");
-  Console.WriteLine("Now please enter the name of the second fighter (min 3 characters and max 12):");
-  name2 = Console.ReadLine();
-  while (string.IsNullOrWhiteSpace(name2) || name2.Length < 3 || name2.Length > 12)
+  string[] randname = { "bert", "bosse", "leon", "bengt", "mia" }; //mia!!!FIXA -_- 
+  //randomiserar mellan de olika namnen
+  //[] basically låter mig skapa en samling (som list) som senare jag kan plocka ur
+  Console.WriteLine("Would you like to choose the name of your second fighter?");
+  string input = Console.ReadLine().ToLower();
+  //denna string ger dig möjligheten att svara antigen nej -- du får random name. ja -- du får skriva eget
+  if (input == "no")
   {
-    Console.WriteLine("Name entered is too short or too long. Please try again!");
+    name2 = randname[Random.Shared.Next(randname.Length)];
+    Console.WriteLine($"Random name chosen: {name2}");
+  }
+  else
+  {
+    Console.WriteLine("Now please enter the name of the second fighter (min 3 characters and max 12):");
     name2 = Console.ReadLine();
+    while (string.IsNullOrWhiteSpace(name2) || name2.Length < 3 || name2.Length > 12)
+    {
+      Console.WriteLine("Name entered is too short or too long. Please try again!");
+      name2 = Console.ReadLine();
+    }
   }
   Console.WriteLine("--------------------------------");
   Console.WriteLine($"Fighters chosen {name1} vs {name2}!");
@@ -51,7 +66,7 @@ while (playagain)
 
   int player1hp = 100;
   int player2hp = 100;
-  int maxrounds = 5;
+  int maxrounds = 7;
   int currround = 1;
   while (player1hp > 0 && player2hp > 0 && currround <= maxrounds)
   //main loop där spelet körs till en av dem dör (eller båda) eller om maxrundor nås
@@ -75,6 +90,7 @@ while (playagain)
     string choice = Console.ReadLine();
     Console.Clear();
     double hitchancep1;
+    //double är som int fast för decimaltal
     int mindamp1, maxdamp1;
     if (choice == "1")
     {
@@ -158,7 +174,7 @@ while (playagain)
     Console.Clear();
 
     currround++;
-  //läger till en runda 
+    //läger till en runda 
   }
   Console.WriteLine("=========RESULTS==========");
   if (player1hp <= 0 && player2hp <= 0)
@@ -166,6 +182,8 @@ while (playagain)
     Console.WriteLine("--------------------------------");
     Console.WriteLine("            Tie!");
     Console.WriteLine("--------------------------------");
+    Console.ReadLine();
+    Console.Clear();
   }
 
   else if (player1hp <= 0)
@@ -173,12 +191,16 @@ while (playagain)
     Console.WriteLine("--------------------------------");
     Console.WriteLine($"       {name2} won!!");
     Console.WriteLine("--------------------------------");
+    Console.ReadLine();
+    Console.Clear();
   }
   else if (player2hp <= 0)
   {
     Console.WriteLine("--------------------------------");
     Console.WriteLine($"       {name1} won!!");
     Console.WriteLine("--------------------------------");
+    Console.ReadLine();
+    Console.Clear();
   }
   else
   {
@@ -187,18 +209,24 @@ while (playagain)
       Console.WriteLine("--------------------------------");
       Console.WriteLine($"{name1} won due to hp!");
       Console.WriteLine("--------------------------------");
+      Console.ReadLine();
+      Console.Clear();
     }
     else if (player2hp > player1hp)
     {
       Console.WriteLine("--------------------------------");
       Console.WriteLine($"{name2} won due to hp!");
       Console.WriteLine("--------------------------------");
+      Console.ReadLine();
+      Console.Clear();
     }
     else
     {
       Console.WriteLine("--------------------------------");
-      Console.WriteLine("tie!");
+      Console.WriteLine("             tie!");
       Console.WriteLine("--------------------------------");
+      Console.ReadLine();
+      Console.Clear();
     }
   }
 
@@ -206,10 +234,26 @@ while (playagain)
   Console.WriteLine("--------------------------------");
   Console.WriteLine("Would you like to play again?");
   string answer = Console.ReadLine().ToLower();
-  playagain = (answer == "yes");
-  if (playagain)
+  if (answer == "yes")
   {
     Console.WriteLine("Press enter to restart!");
+    Console.ReadLine();
+    Console.Clear();
+    playagain = true;
+  }
+
+  else if (answer == "no")
+  {
+    Console.Clear();
+    playagain = false;
+    Console.ReadLine();
+    Console.Clear();
+  }
+  else
+  {
+    Console.Clear();
+    Console.WriteLine("Invalid input. The game will now end :(");
+    playagain = false;
     Console.ReadLine();
     Console.Clear();
   }
