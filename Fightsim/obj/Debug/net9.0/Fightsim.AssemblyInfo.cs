@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Fightsim")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c457b41f88a1d8ac20efd910f14ce98441945938")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e1ccdac502b0c152856c0f7046f2262d66f9f66")]
 [assembly: System.Reflection.AssemblyProductAttribute("Fightsim")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Fightsim")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

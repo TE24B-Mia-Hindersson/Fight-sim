@@ -1,15 +1,4 @@
-﻿// int i = 100;
-// string name = "Mia";
-// while (i > 0 && name == "Mia")
-// {
-//     Console.WriteLine();
-//     i--;
-// }
-// Console.ReadLine();
-// // int i = Random.Shared.Next(0, 21);
-// // Console.WriteLine(i);
-
-
+﻿
 using System.Formats.Asn1;
 
 string name1 = "";
