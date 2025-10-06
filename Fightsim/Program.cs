@@ -19,8 +19,8 @@ bool playagain = true;
 // Används för att starta om spelet
 while (playagain)
 {
-  // name1 = "";
-  // name2 = "";
+  name1 = "";
+  name2 = "";
   //nollställer namnen for new gamess
   Console.WriteLine("--------------------------------");
   Console.WriteLine("    ---Welcome to my game---");
@@ -36,9 +36,9 @@ while (playagain)
     name1 = Console.ReadLine();
   }
   Console.WriteLine("--------------------------------");
-  string[] randname = { "bert", "bosse", "leon", "bengt", "mia" }; //mia!!!FIXA -_- 
+  string[] randname = { "bert", "bosse", "leon", "bengt", "mia" }; 
   //randomiserar mellan de olika namnen
-  //[] basically låter mig skapa en samling (som list) som senare jag kan plocka ur
+  //[] basically låter mig skapa en samling (som list) som senare plockas ur
   Console.WriteLine("Would you like to choose the name of your second fighter?");
   string input = Console.ReadLine().ToLower();
   //denna string ger dig möjligheten att svara antigen nej -- du får random name. ja -- du får skriva eget
@@ -69,7 +69,7 @@ while (playagain)
   int maxrounds = 7;
   int currround = 1;
   while (player1hp > 0 && player2hp > 0 && currround <= maxrounds)
-  //main loop där spelet körs till en av dem dör (eller båda) eller om maxrundor nås
+  //main loop där spelet körs tills en av dem dör (eller båda) eller om maxrundor nås
   {
     Console.Clear();
     if (currround == maxrounds)
